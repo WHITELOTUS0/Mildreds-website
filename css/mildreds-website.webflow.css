@@ -3,7 +3,7 @@
   --body-color: #ffffffb3;
   --white: white;
   --heading-color: white;
-  --primary-color: #caef45;
+  --primary-color: #248ec7;
   --hero-bg: #2c2c2c;
   --black: #171717;
   --breadcrumb-bg: #2a2a2a;
@@ -17,7 +17,7 @@ body.light-mode {
   --body-color: #555555;
   --white: #171717;
   --heading-color: #171717;
-  --primary-color: #7ab800;
+  --primary-color: #248ec7;
   --hero-bg: #f5f5f5;
   --black: #171717;
   --breadcrumb-bg: #e8e8e8;
@@ -1155,7 +1155,7 @@ blockquote {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   background-color: #ffffff0d;
-  border: 1px solid #c0ff7300;
+  border: 1px solid #248ec700;
   border-radius: 15px;
   align-items: center;
   padding: 10px;
@@ -1810,7 +1810,7 @@ blockquote {
 }
 
 .border-gradient-line-top {
-  background-image: linear-gradient(225deg, #c0ff73, #fff0);
+  background-image: linear-gradient(225deg, #248ec7, #fff0);
   width: 40%;
   height: 1px;
   position: absolute;
@@ -1818,7 +1818,7 @@ blockquote {
 }
 
 .border-gradient-line-bottom {
-  background-image: linear-gradient(225deg, #c0ff73, #fff0);
+  background-image: linear-gradient(225deg, #248ec7, #fff0);
   width: 40%;
   height: 1px;
   position: absolute;
@@ -2037,7 +2037,7 @@ blockquote {
 
 .progress-bar-main-wrapper {
   background-color: #ffffff0d;
-  border: 1px solid #c0ff7300;
+  border: 1px solid #248ec700;
   border-radius: 10px;
   padding: 6px;
   position: relative;
@@ -2071,7 +2071,7 @@ blockquote {
 
 .progress-bar-top-border {
   z-index: 1;
-  background-image: linear-gradient(315deg, #c0ff7300 34%, #c0ff73cc 52%, #c0ff7300 70%);
+  background-image: linear-gradient(315deg, #248ec700 34%, #248ec7cc 52%, #248ec700 70%);
   width: 100%;
   height: 1px;
   position: absolute;
@@ -2081,7 +2081,7 @@ blockquote {
 
 .progress-bar-bottom-border {
   z-index: 1;
-  background-image: linear-gradient(315deg, #c0ff7300 34%, #c0ff73cc 52%, #c0ff7300 70%);
+  background-image: linear-gradient(315deg, #248ec700 34%, #248ec7cc 52%, #248ec700 70%);
   width: 100%;
   height: 1px;
   position: absolute;
@@ -2140,7 +2140,7 @@ blockquote {
 }
 
 .text-heighlight-line {
-  background-image: linear-gradient(90deg, #caef45, #caef4500);
+  background-image: linear-gradient(90deg, #248ec7, #248ec700);
   width: 142px;
   height: 5px;
 }
@@ -2156,8 +2156,8 @@ blockquote {
 
 .about-story-section {
   z-index: 9;
-  background-color: var(--dark-light-two);
-  background-image: url('../images/about-story-bg.png');
+  background-color: #fff;
+  background-image: none;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2414,7 +2414,7 @@ blockquote {
 
 .accordian-item {
   background-color: var(--black-bg);
-  border: 1px solid #c0ff7300;
+  border: 1px solid #248ec700;
   border-radius: 16px;
   margin-bottom: 16px;
   padding: 16px 32px 16px 16px;
@@ -2726,7 +2726,7 @@ blockquote {
 .color {
   z-index: 1;
   filter: blur(16px);
-  background-image: linear-gradient(#c0ff7380, #c0ff7380);
+  background-image: linear-gradient(#248ec780, #248ec780);
   width: 100px;
   height: 377px;
   position: absolute;
@@ -5116,6 +5116,25 @@ blockquote {
   #w-node-cd69617b-8761-3381-d7bb-9af900a394b6-00a39485, #w-node-_4aa15e68-c703-c480-ae21-436d4b436255-636a8a06, #w-node-a906f13f-3a9e-5b59-a79e-503743e91ca5-636a8a06 {
     grid-column: span 1 / span 1;
   }
+}
+
+/* Fix: remove dark banner behind My Story */
+.about-story-section.section-padding-130 {
+  background: #fff !important;
+}
+
+/* Make text readable inside this white section even when the site is in dark mode */
+.about-story-section {
+  --heading-color: #171717;
+  --white: #171717;
+  --body-color: #555;
+  --black-bg: #fff;
+}
+
+/* Optional: hide decorative circles */
+.about-story-section .about-circle-shape-small,
+.about-story-section .about-circle-shape-large {
+  display: none !important;
 }
 
 
